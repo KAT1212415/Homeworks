@@ -8,8 +8,10 @@ namespace Task1_1
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) // Добавлен метод Main
         {
+            // Ваш код здесь
+            Console.WriteLine("Hello, World!");
         }
     }
 }
