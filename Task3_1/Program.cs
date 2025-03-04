@@ -50,7 +50,7 @@ namespace Task3_1
                 Console.WriteLine("max={0}", max);
 
                 //3. Вводятся 4 числа. Вывести большее их них.
-                Console.WriteLine("Введите 3 числа");
+                Console.WriteLine("Введите 4 числа");
                 int aa = Convert.ToInt32(Console.ReadLine());
                 int ab = Convert.ToInt32(Console.ReadLine());
                 int ac = Convert.ToInt32(Console.ReadLine());
@@ -125,7 +125,7 @@ namespace Task3_1
                 if (ha > -10 && ha < 10) Console.WriteLine("Да");
                 else
                 {
-                    Console.WriteLine("нет");
+                    Console.WriteLine("не попадает в диапазон");
                 }
                 //Вводится число. Вывести «Да», если оно попадает в диапазон (-∞; -10] Ս [10; +∞), и «Нет» в противном случае.
                 Console.WriteLine("Введите число");
@@ -141,7 +141,7 @@ namespace Task3_1
                 //41 — «Мы построили 41 дом»
                 Console.WriteLine("Введите число домов");
                 int ha1 = Convert.ToInt32(Console.ReadLine());
-                if (ha1 % 10 == 1) Console.WriteLine("Мы построили {0} дом", ha);
+                if (ha1 % 10 == 1) Console.WriteLine("Мы построили {0} дом", ha1);
                 else
                 {
                     if (ha % 10 > 1 && ha % 10 < 5) Console.WriteLine("Мы построили {0} дома", ha1);
