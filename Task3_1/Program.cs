@@ -10,27 +10,27 @@ namespace Task3_1
     {
         static void Main(string[] args)
         {//1. Вводятся два числа. Сравнить их и вывести правильный знак «<», «>» или «=»
-            Console.WriteLine("Введите 2 числа");
+            Console.WriteLine("Задача1. Введите 2 числа");
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
             if (a == b)
             {
-                Console.WriteLine("a=b");
+                Console.WriteLine("{0}={1}",a,b);
             }
             else
             {
                 if (a < b)
                 {
-                    Console.WriteLine("a<b");
+                    Console.WriteLine("{0}<{1}", a, b);
                 }
                 else
                 {
-                    Console.WriteLine("a>b");
+                    Console.WriteLine("{0}>{1}", a, b);
                 }
 
 
                 //2. Вводятся три числа. Вывести большее их них.
-                Console.WriteLine("Введите 3 числа");
+                Console.WriteLine("Задача 2.Введите 3 числа");
                 int aa1 = Convert.ToInt32(Console.ReadLine());
                 int ab1 = Convert.ToInt32(Console.ReadLine());
                 int ac1 = Convert.ToInt32(Console.ReadLine());
@@ -50,7 +50,7 @@ namespace Task3_1
                 Console.WriteLine("max={0}", max);
 
                 //3. Вводятся 4 числа. Вывести большее их них.
-                Console.WriteLine("Введите 4 числа");
+                Console.WriteLine("Задача 3.Введите 4 числа");
                 int aa = Convert.ToInt32(Console.ReadLine());
                 int ab = Convert.ToInt32(Console.ReadLine());
                 int ac = Convert.ToInt32(Console.ReadLine());
@@ -72,9 +72,9 @@ namespace Task3_1
                 {
                     max1 = ad;
                 }
-                Console.WriteLine("max={0}", max);
+                Console.WriteLine("max={0}", max1);
                 // 4.Вводятся три разных числа. Вывести медиану – среднее по величине число.
-                Console.WriteLine("Введите 3 числа");
+                Console.WriteLine("Задача 4.Введите 3 числа");
                 int ba = Convert.ToInt32(Console.ReadLine());
                 int bb = Convert.ToInt32(Console.ReadLine());
                 int bc = Convert.ToInt32(Console.ReadLine());
@@ -92,7 +92,7 @@ namespace Task3_1
                 else Console.WriteLine("mediana ={0}", bc);
 
                 // 5.Вводится число. Вывести «Да», если оно оканчивается на 0, и «Нет» в противном случае.
-                Console.WriteLine("Введите число");
+                Console.WriteLine("Задача 5.Введите число");
                 int сa = Convert.ToInt32(Console.ReadLine());
                 int nc = сa % 10;
                 if (nc == 0) Console.WriteLine("{0} оканчивается на 0", сa);
@@ -102,7 +102,7 @@ namespace Task3_1
                 }
 
                 //6.Вводится число. Вывести «Да», если оно четное, и «Нет» в противном случае.
-                Console.WriteLine("Введите число");
+                Console.WriteLine("Задача 6.Введите число");
                 int fa = Convert.ToInt32(Console.ReadLine());
                 int nf = fa % 2;
                 if (nf == 0) Console.WriteLine("{0} четное", fa);
@@ -111,43 +111,43 @@ namespace Task3_1
                     Console.WriteLine("{0} не четное", fa);
                 }
                 //7. Вводится число. Вывести «Да», если оно двухзначное, и «Нет» в противном случае.
-                Console.WriteLine("Введите число");
+                Console.WriteLine("Задача 7.Введите число");
                 int ga = Convert.ToInt32(Console.ReadLine());
                 if (ga > 10 && ga < 100) Console.WriteLine(" двухзначное", ga);
                 else
                 {
-                    Console.WriteLine("нет");
+                    Console.WriteLine("не двузначное");
                 }
 
                 //8. Вводится число. Вывести «Да», если оно попадает в диапазон [-10,10], и «Нет» в противном случае.
-                Console.WriteLine("Введите число");
+                Console.WriteLine("Задача 8.Введите число");
                 int ha = Convert.ToInt32(Console.ReadLine());
                 if (ha > -10 && ha < 10) Console.WriteLine("Да");
                 else
                 {
-                    Console.WriteLine("не попадает в диапазон");
+                    Console.WriteLine("не попадает в диапазон от -10 до 10");
                 }
-                //Вводится число. Вывести «Да», если оно попадает в диапазон (-∞; -10] Ս [10; +∞), и «Нет» в противном случае.
-                Console.WriteLine("Введите число");
+                //9.Вводится число. Вывести «Да», если оно попадает в диапазон (-∞; -10] Ս [10; +∞), и «Нет» в противном случае.
+                Console.WriteLine("Задача 9.Введите число");
                 int ia = Convert.ToInt32(Console.ReadLine());
-                if (ia <= -10 || ia >= 10) Console.WriteLine("Да");
+                if (ia <= -10 || ia >= 10) Console.WriteLine("Попадает в диапазон (-∞; -10] Ս [10; +∞)");
                 else
                 {
                     Console.WriteLine("нет");
                 }
-                //9.Застройщик построил n домов. Вывести фразу «Мы построили n домов»,
+                //10.Застройщик построил n домов. Вывести фразу «Мы построили n домов»,
                 //обеспечив правильное согласование числа со словом «дом»,
                 //например: 20 — «Мы построили 20 домов», 32 — «Мы построили 32 дома»,
                 //41 — «Мы построили 41 дом»
-                Console.WriteLine("Введите число домов");
+                Console.WriteLine("Задача 10.Введите число домов");
                 int ha1 = Convert.ToInt32(Console.ReadLine());
                 if (ha1 % 10 == 1) Console.WriteLine("Мы построили {0} дом", ha1);
                 else
                 {
-                    if (ha % 10 > 1 && ha % 10 < 5) Console.WriteLine("Мы построили {0} дома", ha1);
+                    if (ha1 % 10 > 1 && ha1 % 10 < 5) Console.WriteLine("Мы построили {0} дома", ha1);
                     else
                     {
-                        Console.WriteLine("Мы построили {0} домов", ha);
+                        Console.WriteLine("Мы построили {0} домов", ha1);
                     }
                     //10.Можно ли на прямоугольном участке застройки размером a * b метров
                     //разместить два дома размером в плане p * q и r * s метров?
