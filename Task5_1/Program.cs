@@ -131,9 +131,9 @@ namespace Task5_1
                     //Console.WriteLine("{0} ", array[i]);
 
                     {
-                        if (array4[i] < array4[j])
+                        if (array4[i] > array4[j])
                         {
-                            t = array[i]; array4[i] = array4[j]; array4[j] = t;
+                            t = array4[i]; array4[i] = array4[j]; array4[j] = t;
                         }
                         //Console.WriteLine("{0} ", array[i]);
                     }
@@ -145,7 +145,7 @@ namespace Task5_1
                     //Console.WriteLine("{0} ", array[i]);
 
                     {
-                        if (array4[i] >= array4[j])
+                        if (array4[i] < array4[j])
                         {
                             t = array4[i]; array4[i] = array4[j]; array4[j] = t;
                         }
@@ -153,10 +153,11 @@ namespace Task5_1
                     }
                 }
             }
+            Console.WriteLine();
 
             for (int aa = 0; aa < mm; aa++)
             {
-                Console.Write("{0} ", array4[a]);
+                Console.Write("{0} ", array4[aa]);
             }
             Console.WriteLine();
             //Задача 6.Сформировать двумерный массив вида
@@ -213,10 +214,10 @@ namespace Task5_1
                 for (int j = 0; j < nn; j++)
                 {
                     max1 = array6[i, 0];
-                    max1= array6[i, j] > max ? max = array6[i, j] : array6[i, 0];
+                    max1= array6[i, j] > max1 ? max1 = array6[i, j] : array6[i, 0];
 
                 }
-                Console.WriteLine("max {0} строки {1}  ", i, max);
+                Console.WriteLine("max {0} строки {1}  ", i, max1);
             }
 
 
