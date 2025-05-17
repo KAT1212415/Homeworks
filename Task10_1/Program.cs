@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using static Task10_1.Program;
 
 namespace Task10_1
 {
@@ -12,39 +10,39 @@ namespace Task10_1
     {
         static void Main(string[] args)
         {
-            Building house1 = new Building ("Рябиновая 20", 10, 1989);
-            MultiBuilding house2 = new MultiBuilding("Рябиновая 30", 60, 1987,4,true);
-            Building house3 = house2;
+            Building building1 = new Building("Рябиновая 20", 10, 1989);
+            MultiBuilding multiBuilding1 = new MultiBuilding("Рябиновая 30", 60, 1987, 4, true);
+            Building building2 = multiBuilding1;
             //MultiBuilding house4 = (MultiBuilding)house1;
-            if (house1 is MultiBuilding)
+            if (building1 is MultiBuilding)
             {
-                MultiBuilding house4 = (MultiBuilding)house1;
-                Console.WriteLine($"после даункастинга{house4.CalculateTax()}");
+                MultiBuilding multiBuilding2 = (MultiBuilding)building1;
+                Console.WriteLine($"после даункастинга{multiBuilding2.CalculateTax()}");
             }
-            else { Console.WriteLine("Ошибка"); };
-            Console.WriteLine(house1.CalculateTax());
-            Console.WriteLine(house2.CalculateTax());
-            Console.WriteLine(house3.CalculateTax());
-            //Console.WriteLine(house4.CalculateTax());
-            house1.DisplayInfo();
-            house2.DisplayInfo();
-            house3.DisplayInfo();
-            //house4.DisplayInfo();
+            else { Console.WriteLine($"Ошибка {nameof(building1)} не {nameof(MultiBuilding)} "); };
+            Console.WriteLine($"Налог на {nameof(building1)} сорставит {building1.CalculateTax()}");
+            Console.WriteLine($"Налог на {nameof(multiBuilding1)} сорставит {multiBuilding1.CalculateTax()}");
+
+            building1.DisplayInfo();
+            multiBuilding1.DisplayInfo();
+            
+
 
 
         }
     }
+
     public class Building
     {
-        protected  string _address;
+        protected string _address;
         protected double _area;
         protected int _yearBuilt;
-        public int BuildingAge 
+        public int BuildingAge
         {
-            get { return  DateTime.Now.Year - _yearBuilt; }
+            get { return DateTime.Now.Year - _yearBuilt; }
         }
 
-        public Building (string address, double area, int yearBuilt)
+        public Building(string address, double area, int yearBuilt)
         {
             _address = address;
             _area = area;
@@ -57,7 +55,7 @@ namespace Task10_1
         }
         public virtual void DisplayInfo()
         {
-            Console.WriteLine($"{_address} {_area} {_yearBuilt}"); 
+            Console.WriteLine($"{_address} {_area} {_yearBuilt}");
         }
     }
     public class MultiBuilding : Building
@@ -65,14 +63,14 @@ namespace Task10_1
         private int _floors;
         private bool _hasElevator;
 
-        public MultiBuilding(string address, double area, int yearBuilt, int floors, bool hasElevator):
-        base (address, area, yearBuilt)
+        public MultiBuilding(string address, double area, int yearBuilt, int floors, bool hasElevator) :
+        base(address, area, yearBuilt)
         {
-            _floors=floors;
-            _hasElevator=hasElevator;
+            _floors = floors;
+            _hasElevator = hasElevator;
         }
-            public override double CalculateTax()
-            {
+        public override double CalculateTax()
+        {
             double Tax = 0;
 
             if (_hasElevator)
@@ -81,17 +79,16 @@ namespace Task10_1
             }
             else
             {
-                Tax=(_area * 1000) * (1 + (_floors - 1) * 0.05);
+                Tax = (_area * 1000) * (1 + (_floors - 1) * 0.05);
             }
             return (Tax);
-            } 
-            public override void DisplayInfo()
-            {
-                Console.WriteLine($"{_address}, {_area}, {_yearBuilt},{_floors},{_hasElevator}");
-            }
-    
-            
-    }
+        }
+        public override void DisplayInfo()
+        {
+            Console.WriteLine($"{_address}, {_area}, {_yearBuilt},{_floors},{_hasElevator}");
+        }
 
+
+    }
 
 }
