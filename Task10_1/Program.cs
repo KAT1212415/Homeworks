@@ -17,7 +17,7 @@ namespace Task10_1
             if (building1 is MultiBuilding)
             {
                 MultiBuilding multiBuilding2 = (MultiBuilding)building1;
-                Console.WriteLine($"после даункастинга{multiBuilding2.CalculateTax()}");
+                Console.WriteLine($"После даункастинга{multiBuilding2.CalculateTax()}");
             }
             else { Console.WriteLine($"Ошибка {nameof(building1)} не {nameof(MultiBuilding)} "); };
             Console.WriteLine($"Налог на {nameof(building1)} сорставит {building1.CalculateTax()}");
