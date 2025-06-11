@@ -34,7 +34,7 @@ namespace Task15_3
             Console.WriteLine($"Есть ли \"a@example.com\" , \"alice@example.com\" в newSubscribers-{newSubscribers.IsSubsetOf(subset)}");
 
             
-
+            
         }
     }
 }
