@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfApp2._1_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2._1_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="530" Width="300">
+    <Grid>
+        <Ellipse
+            Name="Ellipse1" 
+            HorizontalAlignment="Center"
+            Height="100" Margin="0,28,0,0" 
+            Stroke="Black" 
+            VerticalAlignment="Top"
+            Width="100" Fill="#FF5E0C0C"/>
+        <Ellipse 
+            Name="Ellipse2"
+            HorizontalAlignment="Center"
+            Height="100"
+            Margin="0,155,0,0" 
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" Fill="Black"/>
+        <Ellipse 
+            Name="Ellipse3"
+            HorizontalAlignment="Center" 
+            Height="100" 
+            Margin="0,281,0,0"
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="100" Fill="#FF328512"/>
+        <Button 
+            Content="Button" 
+            HorizontalAlignment="Center" 
+            Margin="0,429,0,0"
+            VerticalAlignment="Top"
+            Height="37" Width="72" Click="Button_Click"/>
+        <TextBlock 
+            Name="Text1"
+            HorizontalAlignment="Left" 
+            Margin="214,435,0,0" 
+            TextWrapping="Wrap" 
+            Text="TextBlock" 
+            VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp21_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp21_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+        <Grid x:Name="Maingrid">
+        <Grid>
+        <TextBox 
+            Name="TextBox1"
+            HorizontalAlignment="Left" 
+            Text="TextBox" 
+            VerticalAlignment="Top" 
+            Width="212" Height="92"
+            FontSize="48" Background="#FFBBD5BE" FontWeight="Medium" TextWrapping="WrapWithOverflow" RenderTransformOrigin="0.845,0.677" MouseMove="TextBox1_MouseMove" Margin="262,125,0,0" MouseEnter="TextBox1_MouseEnter"/>
+
+    </Grid>
+</Window>
