@@ -1,0 +1,55 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    
+    <SolidColorBrush x:Key="PrimaryColor" Color="Green"/>
+    <SolidColorBrush x:Key="HoverColor" Color="Blue"/>
+    <SolidColorBrush x:Key="DisabledColor" Color="Yellow"/>
+    <sys:Double x:Key="ControlHeight">30</sys:Double>
+    <sys:Double x:Key="ControlWidth">120</sys:Double>
+
+    <Style x:Key="BaseButtonStyle1" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="{StaticResource ControlHeight}"/>
+        <Setter Property="Width" Value="{StaticResource ControlWidth}"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    
+    <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="0,0,0,10"/>
+    </Style>
+
+    <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{StaticResource HoverColor}"/>
+            </Trigger>
+  
+        </Style.Triggers>
+    </Style>
+
+
+
+    <Style x:Key="InteractiveButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButtonStyle1}">
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Blue"/>
+            </Trigger>
+            
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                    <Condition Property="IsEnabled" Value="False"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" Value="{StaticResource DisabledColor}"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
