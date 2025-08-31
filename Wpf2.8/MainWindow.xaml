@@ -1,0 +1,67 @@
+﻿<Window x:Class="Wpf2._8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf2._8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="600">
+    <ListBox ItemsSource="{Binding product1}" 
+         d:DataContext="{d:DesignInstance local:MainWindow, IsDesignTimeCreatable=True}" Height="382">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding Name}" FontSize="100"/>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+
+
+    <!--
+    <ListBox ItemsSource="{Binding product1}">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <Grid Margin="0,0,0,0" Height="200" Width="750" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding product2.Image}" RenderTransformOrigin="0.729,0.507" Margin="15,15,15,15"/>
+                    <TextBlock Text="{Binding product2.Name}"  Margin="26,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="24" Height="32" Width="190"/>
+                   
+                    <TextBlock x:Name="_1" Text="привет"  HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" Height="32" Width="100"/>
+                 
+
+                </Grid>
+      -->
+
+    <!--
+
+    <ListBox ItemsSource="{Binding product1}" Width="700" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <Grid Height="150" Width="750" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+
+                    <TextBlock x:Name="_1" Text="привет"    HorizontalAlignment="Left" VerticalAlignment="Top"  FontSize="30" Height="50" Width="100"/>
+    </Grid>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+       -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Window>
